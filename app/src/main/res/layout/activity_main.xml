@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.demo.gerardo_tarazona.loginfacebookandbannerad.MainActivity"
+    android:background="#424242">
+    <com.facebook.login.widget.LoginButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/login_facebook"
+        android:layout_above="@+id/adView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="126dp" />
+
+    <com.google.android.gms.ads.AdView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/adView"
+        ads:adUnitId="@string/ad_view_id"
+        ads:adSize="BANNER"
+
+        ></com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:textSize="23sp"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="27dp"
+        android:layout_toStartOf="@+id/login_facebook" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        ads:srcCompat="@drawable/com_facebook_profile_picture_blank_portrait"
+        android:layout_above="@+id/login_facebook"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/welcome" />
+
+</RelativeLayout>
